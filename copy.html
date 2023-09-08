@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+</head>
+<body>
+    <p>Your Name: John Doe</p>
+    <p>Phone Number: <span id="phoneNumber">+1234567890</span></p>
+    
+    <button id="copyPhoneNumber">Copy Phone Number</button>
+
+    <script>
+        document.getElementById("copyPhoneNumber").addEventListener("click", function () {
+            var phoneNumber = document.getElementById("phoneNumber").textContent;
+
+            // Create a temporary input field to copy text to the clipboard
+            var tempInput = document.createElement("input");
+            tempInput.type = "text";
+            tempInput.value = phoneNumber;
+
+            // Append the input field to the document
+            document.body.appendChild(tempInput);
+
+            // Select the text in the input field
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the selected text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary input field
+            document.body.removeChild(tempInput);
+
+            alert("Phone number copied to clipboard: " + phoneNumber);
+        });
+    </script>
+</body>
+</html>
