@@ -9,7 +9,7 @@
     <script>
         window.history.pushState(null, null, documnet.URL);
         window.addEventListener("popstate", function (){
-            this.window.history.pushState(null, null, this.document.URL);
+            window.history.pushState(null, null, document.URL);
         })
     </script>
 </body>
