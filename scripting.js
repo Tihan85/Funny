@@ -48,7 +48,7 @@
         
             try {
                 if (document.execCommand("copy")) {
-                    alert("Number copied to clipboard: " + numberToCopy);
+                    alert("Now go paste my number into your contacts \u{1F609}: " + numberToCopy);
                 } else {
                     alert("Copy to clipboard failed. Please copy the number manually.");
                 }
