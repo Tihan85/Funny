@@ -63,7 +63,7 @@
 
     document.getElementById("redirectButton").addEventListener("click", function () {
         setTimeout(function () {
-            window.location.href = blank.html;
+            window.location.href = "blank.html";
         }, 5000);
     });
 
