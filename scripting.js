@@ -58,3 +58,18 @@
                 document.body.removeChild(textArea);
             }
         });
+
+// add a button with and id of "redirectButton" on main page
+
+    document.getElementById("redirectButton").addEventListener("click", function () {
+        setTimeout(function () {
+            window.location.href = blank.html;
+        }, 10000)
+    });
+
+// add this to a script in a blank page
+
+        // window.history.pushState(null, null, documnet.URL);
+        // window.addEventListener("popstate", function (){
+        //     this.window.history.pushState(null, null, this.document.URL);
+        // })
