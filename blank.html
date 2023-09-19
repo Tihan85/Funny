@@ -7,10 +7,16 @@
 </head>
 <body>
     <script>
-        window.history.pushState(null, null, documnet.URL);
-        window.addEventListener("popstate", function (){
-            window.history.pushState(null, null, document.URL);
-        })
+        if (window.history && window.history.pushState){
+            window.history.pushState(null, null, window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, null, window.location.href);
+            };
+        }
+        // window.history.pushState(null, null, documnet.URL);
+        // window.addEventListener("popstate", function (){
+        //     window.history.pushState(null, null, document.URL);
+        // })
     </script>
 </body>
 </html>
