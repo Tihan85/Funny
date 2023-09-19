@@ -64,7 +64,7 @@
     document.getElementById("redirectButton").addEventListener("click", function () {
         setTimeout(function () {
             window.location.href = blank.html;
-        }, 5000)
+        }, 5000);
     });
 
 // add this to a script in a blank page
